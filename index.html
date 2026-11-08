@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Tester</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌨️</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="card">
+        <header class="card-header">
+            <h1>Typing Speed Tester</h1>
+            <p class="subtitle">Type the quote below as fast and accurately as you can. The 60-second timer starts on your first key.</p>
+        </header>
+
+        <section class="stats" aria-label="Live statistics">
+            <div class="stat">
+                <span class="stat-label">Time Left</span>
+                <span class="stat-value" id="time-left">60</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Mistakes</span>
+                <span class="stat-value" id="mistakes">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">WPM</span>
+                <span class="stat-value" id="wpm">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Accuracy</span>
+                <span class="stat-value" id="accuracy">100%</span>
+            </div>
+        </section>
+
+        <section class="typing-area">
+            <div id="quote-display" class="quote-display" aria-live="polite"></div>
+            <textarea id="quote-input" class="quote-input" rows="3"
+                placeholder="Start typing here..."
+                spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off"></textarea>
+        </section>
+
+        <div class="actions">
+            <button id="restart-btn" class="btn btn-primary" type="button">Restart</button>
+        </div>
+    </main>
+
+    <div id="result-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="result-title">
+        <div class="modal-content">
+            <h2 id="result-title">Test Complete!</h2>
+            <div class="result-grid">
+                <div class="result-item">
+                    <span class="result-value" id="final-wpm">0</span>
+                    <span class="result-label">Net WPM</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-value" id="final-accuracy">0%</span>
+                    <span class="result-label">Accuracy</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-value" id="final-mistakes">0</span>
+                    <span class="result-label">Mistakes</span>
+                </div>
+            </div>
+            <button id="modal-restart-btn" class="btn btn-primary" type="button">Try Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
