@@ -4,7 +4,7 @@ A 60-second typing test that checks every keystroke in real time. Correct letter
 
 Built with plain HTML, CSS and JavaScript: no frameworks, libraries or CDNs.
 
-**Live demo:** _add your Vercel link here_
+**Live demo:** _typing-testerv2.vercel.app/_
 
 ## Features
 
